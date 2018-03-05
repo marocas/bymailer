@@ -1,0 +1,89 @@
+.bullet-container {
+	background-color: @primary-base;
+
+	img[src^="/images/spacer.gif"] {
+
+		max-width: 0.1px;
+	}
+
+	.main-wrap {
+
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		max-width: @main-max-width + 0;
+		background-color: @secondary-base;
+
+		tr:first-child {
+
+			td {
+				font-family: @openSans;
+				font-size: 16px;
+				color: @primary-color-text;
+				line-height: 140%;
+			}
+		}
+
+		a, p {
+
+			font-family: @openSans;
+			font-size: 16px;
+			color: @primary-color-text;
+			line-height: 140%;
+		}
+
+		span {
+			color: @theme-color-text;
+			font-size: 16px;
+		}
+
+		a {
+
+			color: @theme-color-text;
+			text-decoration: none;
+			border-bottom: 1px solid;
+		}
+
+		.bullet-list {
+
+			// border-left: 3px solid orange;
+
+			tr:last-child {
+
+				p {
+
+					// margin: 0px;
+				}
+			}
+
+			tr:not(:last-child) {
+
+				p {
+
+					// margin: 0px;
+				}
+			}
+
+			a, p {
+
+				font-family: @openSans;
+				font-size: 16px;
+				color: @primary-color-text;
+				line-height: 140%;
+			}
+
+			a {
+
+				color: @theme-color-text;
+				text-decoration: none;
+				border-bottom: 1px solid;
+			}
+
+			.bullet {
+
+				font-size: 16px;
+				color: @primary-color-text;
+				line-height: 140%;
+			}
+		}
+	}
+}

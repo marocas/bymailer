@@ -1,0 +1,70 @@
+.buttons {
+	max-width: @main-width;
+	background-color: @primary-base;
+
+	.main-wrap {
+		max-width: @main-width;
+		background-color: @secondary-base;
+
+		.btn-wrap {
+			margin: 0 auto; // IOS fix align center
+		}
+	}
+
+	&.posRel {
+		width: 230px;
+		background-color: #ffffff;
+		position: relative;
+		top: -50px;
+	}
+}
+
+.btn {
+	-webkit-transition: all 0.2s linear;
+	background-color: #1b98d5;
+	display: block;
+	//border-radius: 5px;
+	padding: 10px 35px;
+	text-align: center;
+	transition: all 0.2s linear;
+
+	&:hover {
+		background-color: @darken-theme-base !important;
+	}
+
+	> a {
+		border-bottom: 0;
+		//-webkit-text-size-adjust: none;
+		color: #ffffff;
+		display: block;
+		font-family: @openSans;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1.35;
+		// line-height: 44px; // vAlign text center
+		margin-bottom: 0;
+		text-align: center;
+		text-decoration: none;
+
+		&:first-letter {
+			text-transform: uppercase;
+		}
+	}
+
+	&.btn-primary {
+		background-color: @theme-base;
+
+		&:hover {
+			background-color: darken(@theme-base, 7%) !important;
+		}
+	}
+
+	&.btn-green {
+		background-color: @theme-2nd-color-text;
+
+		&:hover {
+			background-color: darken(@theme-2nd-color-text, 7%) !important;
+		}
+	}
+}

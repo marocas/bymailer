@@ -1,0 +1,70 @@
+/* -----------------------------------------
+		effects to enter after html is assemble
+----------------------------------------- */
+
+/* --------------------------------------------------------------------------
+	Snow Efects
+	NOTE: to use this, make sure that the main img is set as background img
+	on the parent (e.g. <table>  <tr>  <td -> bgimg> <div .snow> <img src=spacer.gif)
+
+			<table class="main-wrap">
+				<tr>
+					<td style="background: url(http://placehold.it/600x480&amp;text=I+AM+A+FULL+WIDTH+SNOW+IMG) no-repeat center center;">
+						<div class="snow">
+							<img style="max-height: 480px; max-width: 600px; width: 100%" src="/images/spacer.gif" />
+						</div>
+					</td>
+				</tr>
+			</table>
+
+	the img in div, will give the width and height necessary to view the
+	background-image in the parent.
+-------------------------------------------------------------------------- */
+.snow,
+.ExternalClass .ecxsnow {
+	background-image: url('/images/snow01.png'),
+	url('/images/snow02.png'),
+	url('/images/snow03.png');
+	-webkit-animation: snow 15s linear infinite;
+	-moz-animation: snow 15s linear infinite;
+	-ms-animation: snow 15s linear infinite;
+	animation: snow 15s linear infinite;
+	width: 100%;
+	min-height: 100%;
+}
+
+@-moz-keyframes snow {
+	0% {
+		background-position: 0px 0px;
+	}
+	100% {
+		background-position: 500px 1000px, 400px 400px, 300px 300px;
+	}
+}
+
+@-webkit-keyframes snow {
+	0% {
+		background-position: 0px 0px;
+	}
+	100% {
+		background-position: 500px 1000px, 400px 400px, 300px 300px;
+	}
+}
+
+@-ms-keyframes snow {
+	0% {
+		background-position: 0px 0px;
+	}
+	100% {
+		background-position: 500px 1000px, 400px 400px, 300px 300px;
+	}
+}
+
+@keyframes snow {
+	0% {
+		background-position: 0px 0px;
+	}
+	100% {
+		background-position: 500px 1000px, 400px 400px, 300px 300px;
+	}
+}

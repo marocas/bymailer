@@ -1,0 +1,78 @@
+.webview {
+	background-color: @primary-base;
+
+	// normal "view in web" message
+	.main-wrap {
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		max-width: @main-max-width;
+		background-color: @primary-base;
+
+		a, p {
+			font-family: @openSans;
+			font-weight: 300;
+			font-size: 11px;
+			color: @primary-color-text;
+			margin-top: 1.35em;
+		}
+
+		a {
+			color: @theme-color-text;
+			// text-decoration: underline;
+			text-decoration: none;
+			border-bottom: 1px solid;
+		}
+	}
+
+	// 230px main-wrap width gray background
+	// If the preference is aligning the main-wrap on the right or just center,
+	// use the classes on _stylesheets folder in the other.less file to check commun classes
+	// .fleft .clear .fright
+	&.webpage {
+		td {
+			padding: 5px 0;
+		}
+
+		.main-wrap {
+
+			/* change the width percentage on table */
+			/* 90% = 540px  --  95% = 570px + 30px */
+			// max-width: @main-max-width;
+			background-color: #aaafc5;
+			border-radius: 3px;
+
+			td:last-child {
+				a {
+					padding: 0;
+				}
+			}
+
+			td:first-child {
+
+				padding: 5px 0;
+			}
+
+			a {
+				font-family: @openSans;
+				font-weight: 300;
+				font-size: 12px;
+				color: #ffffff;
+				text-decoration: none;
+				border-bottom: 0;
+				padding: 0 8px;
+
+				em {
+					font-family: inherit;
+					font-size: inherit;
+					color: inherit;
+					text-decoration: inherit;
+				}
+
+				img {
+					max-width: 8px;
+					padding-right: 8px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,146 @@
+.product-list {
+	background-color: @primary-base;
+
+	img[src^="/images/spacer.gif"] {
+		max-height: 5px;
+		max-width: 0.1px;
+	}
+
+	.main-wrap {
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		max-width: @main-max-width;
+		background-color: @secondary-base;
+
+		// if using text instead of img
+		// change the "header" background color here.
+		tr:first-child {
+			td {
+				padding-top: 19px;
+				background-color: @lighten-theme-base;
+				p {
+					color: @primary-color-text;
+				}
+			}
+		}
+
+		tr:last-child {
+			td {
+				> img {
+					width: 100%;
+					max-width: 540px;
+					max-height: 62px;
+				}
+			}
+		}
+
+		a, p {
+			font-family: @openSans;
+			font-size: 16px;
+			font-weight: 300;
+			color: @primary-color-text;
+		}
+
+		span {
+			font-size: 16px;
+			color: @theme-color-text;
+		}
+
+		a {
+			color: @theme-color-text;
+			text-decoration: none;
+		}
+	}
+
+	.item-wrap {
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		max-width: @main-max-width;
+		background-color: @secondary-base;
+
+		.inner-wrap {
+			min-width: 194px;
+			max-width: @main-max-width;
+
+			.icon-logo {
+				min-width: 120px;
+			}
+
+			.progarrow {
+				width: 100%;
+				max-width: 187px;
+				min-width: 120px;
+			}
+
+			.text-container {
+				max-width: 337px;
+
+				table.text-content {
+					max-width: 330px;
+					tr:first-child {
+						td {
+							padding-top: 5%;
+						}
+					}
+				}
+
+				.btn-mais__right {
+					float: right;
+					max-width: 116px;
+					min-width: 60px;
+				}
+
+				.btn-mais__left {
+					float: left;
+					max-width: 116px;
+					min-width: 60px;
+				}
+			}
+
+			a, p {
+				font-family: @openSans;
+				font-size: 12px;
+				font-weight: 300;
+				color: @primary-color-text;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			span {
+				font-family: @openSans;
+				font-size: 12px;
+				font-weight: 300;
+				color: @theme-color-text;
+			}
+
+			td {
+				vertical-align: top;
+			}
+
+			td:first-of-type {
+				vertical-align: top;
+			}
+		}
+	}
+
+	/*  ==================
+		module classes
+		================== */
+	.item-spacer__bgcolor {
+		background-color: @secondary-base;
+	}
+
+	.white-bgcolor {
+		background-color: #ffffff;
+	}
+
+	.grey-bg {
+		background-color: #f0f0f0;
+	}
+
+	.btn-spacer {
+		min-width: 40px;
+	}
+}

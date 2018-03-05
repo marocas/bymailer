@@ -1,0 +1,129 @@
+{{!--  NOTE --
+Wrap the whole table in some conditional code to appease Outlook, Lotus Notes and clients that render with IE
+campaignmonitor : https://www.campaignmonitor.com/blog/post/4240/creating-a-centred-responsive-design-without-media-queries
+JSFiddle : http://jsfiddle.net/YJt3r/
+================================--}}
+<table class="three-col__contatent  {{classT}}" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td>
+			<!--[if (gte mso 9)|(IE)]>
+				<table width="{{#if tableWidth}}{{tableWidth}}{{else}}600{{/if}}" align="center" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+				<td>
+			<![endif]-->
+			<table class="main {{classW}}" cellpadding="0" cellspacing="0" border="0" align="center">
+				<tr>
+					<td>
+						<table class="main-wrap" width="62%" cellspacing="0" cellpadding="0" border="0" align="center">
+							<tr>
+								<td height="16" style="height: 16px; line-height: 16px">
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>
+										Esta mensagem foi enviada automaticamente pelo que as mensagens enviadas para este endereço
+										de e-mail não serão respondidas.
+									</p>
+								</td>
+							</tr>
+							<td height="16" style="height: 16px; line-height: 16px">
+								&nbsp;
+							</td>
+						</table>
+						<table class="three-col__container" width="100%" border="0" cellpadding="0" cellspacing="0" align="left">
+							<tr>
+								<td style="text-align: left; vertical-align: top; font-size: 0;">
+									<!--[if (gte mso 9)|(IE)]>
+										<table width="600" align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#f2f2f2" style="background-color: #f2f2f2;">
+										<tr>
+										<td>
+									<![endif]-->
+									<div>
+										<table class="three-col__div" border="0" cellpadding="0" cellspacing="0" align="center">
+											{{!-- text --}}
+											<tr>
+												<td width="10" style="width: 10px; line-height: 16px">
+													&nbsp;
+												</td>
+												<td class="valignmid alignleft">
+													<p>
+														Site NOVO BANCO <br/>
+														<a href="https://www.novobanco.pt/site/" title="www.novobanco.pt"
+															 alt="www.novobanco.pt" target="_blank">novobanco.pt</a>
+													</p>
+												</td>
+												<td width="10" style="width: 10px; line-height: 16px">
+													&nbsp;
+												</td>
+											</tr>
+										</table>
+									</div>
+									<!--[if (gte mso 9)|(IE)]>
+										</td>
+										<td>
+									<![endif]-->
+									<div>
+										<table class="three-col__div" border="0" cellpadding="0" cellspacing="0" align="center">
+											{{!-- text --}}
+											<tr>
+												<td width="10" style="width: 10px; line-height: 16px">
+													&nbsp;
+												</td>
+												<td class="valignmid alignleft">
+													<p>
+														NBdireto <a href="tel:707 24 7 365" title="707 24 7 365" alt="707 24 7 365"
+																				target="">707 24 7 365</a><br/>
+														Atendimento personalizado das 8h às 24h
+													</p>
+												</td>
+												<td width="10" style="width: 10px; line-height: 16px">
+													&nbsp;
+												</td>
+											</tr>
+										</table>
+									</div>
+									<!--[if (gte mso 9)|(IE)]>
+										</td>
+										<td>
+									<![endif]-->
+									<div>
+										<table class="three-col__div" border="0" cellpadding="0" cellspacing="0" align="center">
+											{{!-- text --}}
+											<tr>
+												<td width="10" style="width: 10px; line-height: 16px">
+													&nbsp;
+												</td>
+												<td class="valignmid alignleft">
+													<p>
+														E-mail <br/>
+														<a alt="info@novobanco.pt" title="info@novobanco.pt"
+															 href="mailto:info@novobanco.pt">info@novobanco.pt</a>
+													</p>
+												</td>
+												<td width="10" style="width: 10px; line-height: 16px">
+													&nbsp;
+												</td>
+											</tr>
+										</table>
+									</div>
+									<!--[if (gte mso 9)|(IE)]>
+										</td>
+										</tr>
+										</table>
+									<![endif]-->
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+			<![endif]-->
+		</td>
+	</tr>
+</table>

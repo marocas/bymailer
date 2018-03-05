@@ -1,0 +1,85 @@
+.four-col-n-text {
+	background-color: @primary-base;
+
+	img[src^="/images/spacer.gif"] {
+
+		height: 10px;
+		max-height: 10px;
+		width: 0.1px;
+		max-width: 0.1px;
+	}
+
+	.main-wrap {
+
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		max-width: @main-width;
+		background-color: @secondary-base;
+
+		p {
+
+			font-family: @openSans;
+			font-size: 30px;
+			color: @primary-color-text;
+
+			span {
+
+				color: @theme-color-text;
+			}
+		}
+	}
+
+	.four-col-container {
+
+		background-color: @secondary-base;
+		text-align: center;
+		display: inline;
+
+		.theme-base {
+
+			background-color: @lighten-theme-base;
+		}
+
+		tr:last-child {
+			table {
+				border-top: 3px solid #ffffff;
+			}
+		}
+
+		table {
+			td {
+				width: 148px;
+				max-width: 148px;
+				min-width: 148px;
+			}
+		}
+
+		font {
+			font-family: @openSans;
+			font-size: 16px;
+			color: @third-color-text;
+		}
+
+		font > a {
+			font-size: 10px;
+			font-family: @openSans;
+			color: @primary-color-text;
+			text-decoration: none;
+		}
+
+		span {
+
+			font-family: @openSans;
+			font-size: 16px;
+			color: @theme-color-text;
+		}
+
+		span > a[href^="tel:"], a {
+
+			font-size: 15px;
+			font-family: @openSans;
+			color: @theme-2nd-color-text;
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,129 @@
+.three-col__contatent {
+	background-color: @primary-base;
+
+	.main{
+		background-color: @primary-base;
+	}
+
+	.main-wrap {
+
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		max-width: @main-max-width - 168;
+		background-color: @primary-base;
+		text-align: center;
+
+		/* first row is a top spacer */
+		tr:not(:nth-child(2)) {
+			td {
+				height: 20px;
+				font-size: 20px;
+				line-height: 20px;
+			}
+		}
+
+		p {
+			&:first-of-type {
+				font-size: 12px;
+				color: @primary-color-text;
+			}
+			&:last-of-type {
+				font-size: 10px;
+			}
+			font-size: 9px;
+			color: @primary-color-text;
+		}
+
+		img {
+			max-width: 117px;
+			max-height: 17px;
+		}
+
+		img[src^="/images/spacer.gif"] {
+			min-height: 20px;
+			max-height: 20px;
+			max-width: 0.1px;
+		}
+
+		tr:nth-child(3) {
+
+			img[src^="/images/spacer.gif"] {
+
+				min-height: 16px;
+				max-height: 16px;
+				max-width: 0.1px;
+			}
+		}
+	}
+
+	.three-col__container {
+		max-width: @main-width;
+		background-color: @primary-base;
+		text-align: left;
+
+		a, p {
+			font-size: 10px;
+		}
+
+		a {
+			text-decoration: underline;
+			cursor: pointer;
+
+			// text-decoration: none;
+			// border-bottom: 1px solid @primary-color-text;
+
+			&[href^='mailto:'],
+			&[href^='tel:'],
+			&:hover,
+			&:active,
+			&:visited {
+				color: @primary-color-text;
+				// text-decoration: none;
+				// border-bottom: 1px solid @primary-color-text;
+			}
+		}
+
+		div {
+			background-color: @primary-base;
+			display: inline-block;
+			vertical-align: middle;
+			border: 0;
+		}
+
+		div:first-child {
+
+			table {
+				max-width: 180px;
+				display: inline-block;
+
+				td:nth-child(2) {
+					width: 160px;
+				}
+			}
+		}
+
+		div:nth-child(2) {
+
+			table {
+				max-width: 288px;
+				display: inline-block;
+
+				td:nth-child(2) {
+					width: 268px;
+				}
+			}
+		}
+
+		div:last-child {
+
+			table {
+				max-width: 132px;
+				display: inline-block;
+
+				td:nth-child(2) {
+					width: 112px;
+				}
+			}
+		}
+	}
+}

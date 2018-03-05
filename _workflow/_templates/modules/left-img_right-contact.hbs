@@ -1,0 +1,90 @@
+{{!--====  NOTE =====
+Wrap the whole table in some conditional code to appease Outlook, Lotus Notes and clients that render with IE
+campaignmonitor : https://www.campaignmonitor.com/blog/post/4240/creating-a-centred-responsive-design-without-media-queries
+JSFiddle : http://jsfiddle.net/YJt3r/
+=====--}}
+<table class="footer-1 {{classT}}" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td>
+			<!--[if (gte mso 9)|(IE)]>
+				<table width="{{#if tableWidth}}{{tableWidth}}{{else}}600{{/if}}" align="center" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+				<td>
+			<![endif]-->
+			<table class="main {{classW}}" cellpadding="0" cellspacing="0" border="0" align="center">
+				<tr>
+					<td>
+						<table class="main-wrap" width="91.7%" border="0" cellpadding="0" cellspacing="0" align="center">
+							<tr>
+								<td style="text-align: center; vertical-align: top; font-size: 0;">
+									<!--[if (gte mso 9)|(IE)]>
+										<table width="540" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#d1e0eb" style="background-color: #d1e0eb;">
+										<tr>
+										<td>
+									<![endif]-->
+									<div style="max-width: 240px; display: inline-block; vertical-align: middle;">
+										<table width="100%" align="center">
+											<tr>
+												<td style="width: 10px;">
+													<p>&nbsp;</p>
+												</td>
+												<td style="max-width: 220px;">
+													<a>
+														<br/>
+														<img style="max-width: 210px; min-width: 210px;" src="{{src}}"
+																 alt="{{alt}}"/>
+														<br/>&nbsp;
+													</a>
+
+												</td>
+												<td style="width: 10px;">
+													<p>&nbsp;</p>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<!--[if (gte mso 9)|(IE)]>
+										</td>
+										<td>
+									<![endif]-->
+									<div style="max-width: 310px; display: inline-block; vertical-align: middle">
+										<table width="100%" align="center">
+											<tr>
+												<td width="10">
+													<p>&nbsp;</p>
+												</td>
+												<td class="alignleft" width="285" style="max-width: 285px; min-width: 285px;">
+													<p>
+														<br/>
+														Lorem ipsum<br/>
+														Tel.:<a href="tel:#">+351 987 654 321</a> | <a href="tel:#">+351 987 654
+														321</a><br/>
+														Email: <a href="mailto:lorem@ipsum.dolor">lorem@ipsum.dolor</a>
+														<br/>&nbsp;
+													</p>
+												</td>
+												<td width="10">
+													<p>&nbsp;</p>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<!--[if (gte mso 9)|(IE)]>
+										</td>
+										</tr>
+										</table>
+									<![endif]-->
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+			<![endif]-->
+		</td>
+	</tr>
+</table>

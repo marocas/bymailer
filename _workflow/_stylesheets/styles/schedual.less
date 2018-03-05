@@ -1,0 +1,89 @@
+.schedual {
+	background-color: @primary-base;
+
+	.main-wrap {
+
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		// max-width: @main-max-width;
+		background-color: @primary-base;
+
+		img {
+
+			width: 100%;
+			max-width: 540px;
+		}
+	}
+
+	.inner-wrap {
+
+		background-color: @primary-base;
+		max-width: 513px;
+	}
+
+	.table-img {
+
+		background-color: @primary-base;
+
+		tr:nth-child(2) {
+
+			td:nth-child(2) {
+
+				max-width: 70px;
+				min-width: 60px;
+
+				img {
+
+					width: 100%;
+					max-width: inherit;
+					min-width: inherit;
+					display: block;
+				}
+			}
+		}
+
+		img[src^="/images/spacer.gif"] {
+
+			height: 10px;
+			max-height: 10px;
+		}
+	}
+
+	.table-text {
+		max-width: 413px;
+
+		p, a {
+			font-family: @openSans;
+			font-size: 13px;
+			font-weight: 300;
+			color: @primary-color-text;
+		}
+
+		a {
+			display: inline;
+		}
+
+		tr:not(.me) {
+			td {
+				background-color: #D2D2D2;
+			}
+
+			td:matches(.me) {
+				background-color: red;
+			}
+		}
+
+		tr:last-child {
+			td {
+
+				border-top: 2px solid @primary-base;
+				border-bottom: 2px solid @primary-base;
+			}
+		}
+
+		img[src^="/images/spacer.gif"] {
+
+			height: 10px;
+		}
+	}
+}

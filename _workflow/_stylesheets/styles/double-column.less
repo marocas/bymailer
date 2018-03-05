@@ -1,0 +1,121 @@
+@dc-width: @main-width + 0px;
+@gutter: 15px;
+@divCont: (@dc-width / 2) - @gutter;
+
+.double {
+	&-column {
+		background-color: @primary-base;
+
+		div {
+			background-color: @secondary-base;
+			width: 100%;
+			max-width: @divCont;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 14px;
+			border: 0;
+
+			&.bs-color {
+				background-color: @primary-base;
+			}
+		}
+	}
+
+	&-content {
+		// width will be the diference in percentage to be placed in table
+	  	width: unit(((@dc-width - (@gutter * 2)) * 100) / @dc-width)+0%;
+		max-width: @divCont * 2;
+		background-color: @secondary-base;
+
+		&.bs-color {
+			background-color: @primary-base;
+		}
+	}
+
+	&-container {
+		height: 100%;
+		background-color: @secondary-base;
+		text-align: left;
+
+		&.bs-color {
+			background-color: @primary-base;
+		}
+
+		tr:nth-of-type(1) {
+			
+
+			td:not(.btn) {
+				&:first-of-type,
+				&:last-of-type {
+					width: @gutter;
+					min-width: @gutter;
+					max-width: @gutter;
+				}
+
+				&:nth-child(2) {
+					width: @divCont - (@gutter * 2);
+					max-width: @divCont - (@gutter * 2);
+					min-width: @divCont - (@gutter * 2);
+				}
+			}
+		}
+
+		/* Normal text costomization */
+		> a, p {
+
+			span {
+				color: @theme-color-text;
+			}
+
+			&.blue-theme__color {
+				font-size: 20px;
+				color: @theme-2nd-color-text;
+			}
+
+			/* U tag, is for mark to be recognize by Gmail */
+			mark, u {
+				font: inherit;
+				color: inherit;
+				background-color: @theme-color-text;
+				text-decoration: none;
+			}
+		}
+
+		> a {
+			color: @theme-color-text;
+			text-decoration: none;
+			border-bottom: 1px solid;
+			background-color: transparent;
+
+			&[href^="tel:"] {
+				color: @primary-color-text;
+				text-decoration: none;
+				border-bottom: 0;
+			}
+
+			&[title^="clique aqui"] {
+				white-space: nowrap;
+			}
+		}
+
+		.lastp {
+
+			font-size: 12px;
+			font-weight: normal;
+			color: @theme-color-text;
+			vertical-align: middle;
+
+			a {
+
+				font-size: 12px;
+				color: @theme-color-text;
+				text-decoration: none !important;
+
+				// buttons style reset from above extend
+				background-color: transparent;
+				height: auto;
+				display: inline-block;
+			}
+		}
+	}
+}

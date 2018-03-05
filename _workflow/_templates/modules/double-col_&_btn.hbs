@@ -1,0 +1,276 @@
+{{!-- NOTE :
+Wrap the whole table in some conditional code to appease Outlook, Lotus Notes and clients that render with IE
+
+campaignmonitor:
+https://www.campaignmonitor.com/blog/post/4240/creating-a-centred-responsive-design-without-media-queries
+
+JSFiddle : http://jsfiddle.net/YJt3r/
+============ --}}
+<table class="double-column {{classT}}" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td>
+			<!--[if (gte mso 9)|(IE)]>
+				<table width="{{#if tableMainWidth}}{{tableMainWidth}}{{else}}600{{/if}}" align="center" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+				<td>
+			<![endif]-->
+			<table class="main {{classW}}" cellpadding="0" cellspacing="0" border="0" align="center">
+				<tr>
+					<td>
+						<table class="double-content" border="0" cellpadding="0" cellspacing="0" align="center">
+							<tr>
+								<td style="text-align: center; font-size: 0;">
+									<!--[if (gte mso 9)|(IE)]>
+										<table width="{{#if tableWidth}}{{tableWidth}}{{else}}600{{/if}}" align="center" cellpadding="0" cellspacing="0" border="0" >
+										<tr>
+										<td>
+									<![endif]-->
+									<div style="vertical-align: {{#if alignContainer-1}}{{alignContainer-1}}{{else}}top{{/if}}">
+										<table class="double-container" border="0" cellpadding="0" cellspacing="0" align="center">
+											{{!-- spacer --}}
+											<tr>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													&nbsp;
+												</td>
+											</tr>
+											{{!-- image --}}
+											{{#if src-1}}
+												<tr>
+													<td>
+														&nbsp;
+													</td>
+													<td class="valigntop">
+														<img src="{{src-1}}"/>
+														<br/>
+													</td>
+													<td>
+														&nbsp;
+													</td>
+												</tr>
+											{{else}}
+												<tr>
+													<td>
+														&nbsp;
+													</td>
+													<td class="valigntop">
+														<img src="http://placehold.it/280x300"/>
+														<br/>
+													</td>
+													<td>
+														&nbsp;
+													</td>
+												</tr>
+											{{/if}}
+											{{!-- text --}}
+											{{#if text-1}}
+												<tr>
+													<td>
+														&nbsp;
+													</td>
+													<td>
+														{{{text-1}}}
+													</td>
+													<td>
+														&nbsp;
+													</td>
+												</tr>
+											{{else}}
+												<tr>
+													<td>
+														&nbsp;
+													</td>
+													<td>
+														<p>
+															Lorem ipsum dolor*<br/>
+															<span>Lorem ipsum</span><br/><br/>
+															Lorem ipsum dolor sit amet *<br/>
+															<span>Lorem ipsum dolor sit amet.</span>
+														</p>
+													</td>
+													<td>
+														&nbsp;
+													</td>
+												</tr>
+											{{/if}}
+											{{!--button--}}
+											{{#if btn-href-1}}
+												<tr>
+													<td>
+														&nbsp;
+													</td>
+													<td>
+													<table border="0" cellspacing="0" cellpadding="0" align="{{#if btn-align-1}}{{btn-align-1}}{{else}}left{{/if}}">
+															<tr>
+																<td class="btn btn-primary">
+																	<a href="{{btn-href-1}}" title="{{btn-title-1}}" target="_blank">{{btn-title-1}}</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td>
+														&nbsp;
+													</td>
+												</tr>
+											{{else}}
+												<tr>
+													<td>
+														&nbsp;
+													</td>
+													<td>
+														<table border="0" cellspacing="0" cellpadding="0" align="center">
+															<tr>
+																<td class="btn btn-primary">
+																	<a href="#" title="button" target="_blank">button</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td>
+														&nbsp;
+													</td>
+												</tr>
+											{{/if}}
+										</table>
+									</div>
+									<!--[if (gte mso 9)|(IE)]>
+										</td>
+										<td>
+									<![endif]-->
+									<div style="vertical-align: {{#if alignContainer-2}}{{alignContainer-2}}{{else}}top{{/if}}">
+										<table class="double-container" border="0" cellpadding="0" cellspacing="0" align="center">
+											{{!-- spacer --}}
+											<tr>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													&nbsp;
+												</td>
+												<td>
+													&nbsp;
+												</td>
+											</tr>
+											{{!-- image --}}
+											{{#if src-2}}
+												<tr>
+													<td>
+														&nbsp;
+													</td>
+													<td class="valigntop">
+														<img src="{{src-2}}"/>
+														<br/>
+													</td>
+													<td>
+														&nbsp;
+													</td>
+												</tr>
+											{{else}}
+												<tr>
+													<td>
+														&nbsp;
+													</td>
+													<td class="valigntop">
+														<img src="http://placehold.it/280x300"/>
+														<br/>
+													</td>
+													<td>
+														&nbsp;
+													</td>
+												</tr>
+											{{/if}}
+											{{!-- text --}}
+											{{#if text-2}}
+												<tr>
+													<td>
+														&nbsp;
+													</td>
+													<td>
+														{{{text-2}}}
+													</td>
+													<td>
+														&nbsp;
+													</td>
+												</tr>
+											{{else}}
+												<tr>
+													<td>
+														&nbsp;
+													</td>
+													<td>
+														<p>
+															Lorem ipsum dolor*<br/>
+															<span>Lorem ipsum</span><br/><br/>
+															Lorem ipsum dolor sit amet *<br/>
+															<span>Lorem ipsum dolor sit amet.</span>
+														</p>
+													</td>
+													<td>
+														&nbsp;
+													</td>
+												</tr>
+											{{/if}}
+											{{!--button--}}
+											{{#if btn-href-2}}
+												<tr>
+													<td>
+														&nbsp;
+													</td>
+													<td>
+														<table border="0" cellspacing="0" cellpadding="0" align="{{#if btn-align-2}}{{btn-align-2}}{{else}}left{{/if}}">
+															<tr>
+																<td class="btn btn-primary">
+																	<a href="{{btn-href-2}}" title="{{btn-title-2}}" target="_blank">{{btn-title-2}}</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td>
+														&nbsp;
+													</td>
+												</tr>
+											{{else}}
+												<tr>
+													<td>
+														&nbsp;
+													</td>
+													<td>
+														<table border="0" cellspacing="0" cellpadding="0" align="center">
+															<tr>
+																<td class="btn btn-primary">
+																	<a href="#" title="button" target="_blank">button</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td>
+														&nbsp;
+													</td>
+												</tr>
+											{{/if}}
+										</table>
+									</div>
+									<!--[if (gte mso 9)|(IE)]>
+										</td>
+										</tr>
+										</table>
+									<![endif]-->
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+			<![endif]-->
+		</td>
+	</tr>
+</table>

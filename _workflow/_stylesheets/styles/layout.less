@@ -1,0 +1,38 @@
+/* -------------------------------------
+		BODY & CONTAINER
+------------------------------------- */
+body, html {
+	background-color: @primary-base;
+}
+
+.body-wrap {
+	margin: 0;
+	padding: 0;
+	background-color: @primary-base;
+}
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width,
+but will also shrink down on a phone or something */
+.main {
+	min-width: @main-min-width;
+	max-width: @main-width;
+	width: 100%;
+	background-color: @secondary-base;
+
+	&.bs-color {
+		background-color: @primary-base;
+	}
+}
+
+/* center align fix for all inner table for all sections focusing iPhone Gmail App */
+.main-wrap {
+	margin: 0 auto;
+}
+
+/* -------------------------------------
+		Main Table : Width // Max-Width
+------------------------------------- */
+
+@main-width: 600px;
+@main-max-width: @main-width - 60px;
+@main-min-width: 260px;

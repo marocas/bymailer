@@ -1,0 +1,107 @@
+.full-width-img {
+	background-color: @primary-base;
+
+	.main-wrap {
+
+		.img-wrap {
+			margin: 0 auto; // IOS fix align center.
+		}
+
+		img {
+			width: 100%;
+		}
+
+		&.header {
+			img {
+				width: 100%;
+				max-width: @main-width;
+				max-height: 420px;
+			}
+		}
+
+		&.sig {
+			img {
+				width: 100%;
+				max-width: @main-width;
+				max-height: 137px;
+			}
+		}
+
+		&.centered {
+			background-color: @secondary-base;
+
+			.img-wrap {
+				min-width: 260px;
+				margin: 0 auto;
+			}
+
+			img {
+				width: 100%;
+				max-width: 260px;
+				min-width: 260px;
+				max-height: 246px;
+			}
+		}
+
+		&.logo {
+			background-color: @secondary-base;
+
+			.img-wrap {
+				min-width: 310px;
+				margin: 0 auto;
+			}
+
+			img {
+				width: 100%;
+				max-width: 310px;
+				min-width: 310px;
+				max-height: 164px;
+			}
+		}
+	}
+
+	.caption-wrap {
+		/* Normal text costomization */
+		a, p {
+			font-family: @openSans;
+			font-size: 16px;
+			font-weight: 300;
+			color: @primary-color-text;
+			line-height: 150%;
+
+			span {
+				color: @theme-color-text;
+				font-size: 16px;
+			}
+
+			&.blue-theme__color {
+				font-size: 20px;
+				color: @theme-2nd-color-text;
+			}
+
+			/* U tag, is for mark to be recognize by Gmail */
+			mark, u {
+				font: inherit;
+				color: inherit;
+				background-color: @theme-color-text;
+				text-decoration: none;
+			}
+		}
+
+		a {
+			color: @theme-color-text;
+			text-decoration: none;
+			border-bottom: 1px solid;
+
+			&[href^="tel:"] {
+				color: @primary-color-text;
+				text-decoration: none;
+				border-bottom: 0;
+			}
+
+			&[title^="clique aqui"] {
+				white-space: nowrap;
+			}
+		}
+	}
+}

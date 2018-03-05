@@ -1,0 +1,146 @@
+.footer-1 {
+	background-color: @lighten-theme-base;
+
+	.main-wrap {
+
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		// max-width: @main-max-width;
+		background-color: @primary-base;
+
+		p, strong, em {
+
+			font-family: @openSans;
+			font-size: 12px;
+			color: @primary-color-text;
+		}
+
+		a {
+
+			font-family: @openSans;
+			font-size: 12px;
+			color: @primary-color-text;
+		}
+
+		a[href^="tel:"] {
+
+			text-decoration: none;
+		}
+
+		a[href^="mailto:"] {
+
+			color: @theme-color-text;
+			text-decoration: none;
+		}
+
+		img {
+
+			max-height: 60px;
+		}
+
+		td, div {
+
+			background-color: @lighten-theme-base;
+		}
+	}
+}
+
+.footer-2 {
+
+	background-color: @primary-base; // @prefooter2-bgcolor;
+
+	p, strong, em {
+
+		font-family: @openSans;
+		font-size: 12px;
+		color: @primary-color-text;
+	}
+
+	a {
+
+		font-family: @openSans;
+		font-size: 12px;
+		color: @primary-color-text;
+	}
+
+	a[href^="tel:"] {
+
+		text-decoration: none;
+	}
+
+	.main-wrap {
+
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		max-width: @main-max-width;
+		background-color: @primary-base; // @prefooter2-bgcolor;
+	}
+}
+
+.footer-4 {
+
+	background-color: @primary-base;
+
+	.main-wrap {
+
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		// max-width: @main-max-width;
+		background-color: #5fa9b4;
+
+		img {
+			width: 100%;
+		}
+
+		tr:first-child {
+			td {
+				max-width: @main-width;
+				max-height: 25px;
+			}
+		}
+
+		tr:nth-child(2) {
+
+			img {
+				width: 100%;
+			}
+
+			.footer-logos {
+				width: 47%;
+				max-width: 287px;
+				max-height: 47px;
+			}
+
+			.footer-link {
+				width: 35%;
+				max-width: 213px;
+				max-height: 47px;
+			}
+
+			.footer-fb {
+				width: 4%;
+				max-width: 24px;
+				max-height: 47px;
+			}
+
+			.footer-insta {
+				width: 3.9%;
+				max-width: 23px;
+				max-height: 47px;
+			}
+
+			.footer-yt {
+				width: 8.6%;
+				max-width: 53px;
+				max-height: 47px;
+			}
+		}
+
+		tr:last-child {
+			td {
+				max-width: @main-width;
+				max-height: 50px;
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+.program-list {
+	background-color: @primary-base;
+
+	.main-wrap {
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		max-width: @main-max-width;
+		background-color: @primary-base; // @fith-bgcolor;
+
+		a, p {
+			font-family: @openSans;
+			font-size: 16px;
+			font-weight: 300;
+			color: @primary-color-text;
+		}
+
+		span {
+			font-size: 16px;
+			color: @primary-color-text; // @fith-color;
+			display: inline-block;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.inner-wrap {
+		min-width: 194px;
+		max-width: @main-max-width;
+
+		td {
+			vertical-align: middle;
+		}
+	}
+
+	.headerimg {
+		width: 100%;
+		max-width: @main-max-width;
+	}
+
+	.btn-fixed {
+		min-width: 48px;
+		max-width: 58px;
+	}
+
+	.lightgreybg {
+		background-color: #E6E6E6;
+	}
+
+	.darkgreybg {
+		background-color: #D2D2D2;
+	}
+}
