@@ -1,65 +1,68 @@
 .spacer {
 	background-color: @primary-base;
 
-	.main-wrap {
-		@mainWrap: @main-max-width - 0;
-		//change the width percentage on table
-		// unit((540 * 100) / 600)+0% = 90%
-		width: unit((@mainWrap * 100) / @main-width)+0%;
-		max-width: @mainWrap;
-		background-color: @secondary-base;
-
-		td {
-			width: 100%;
-			max-width: @main-width;
-			height: 20px;
-			max-height: 20px;
-			min-height: 20px;
-			line-height: 20px;
-			font-size: 20px;
-		}
-
-		/* use this class to make first and last spacer */
-		.bs-color {
-			background-color: @primary-base;
-		}
+	.main {
 		&.bs-color {
 			background-color: @primary-base;
-		}
-
-		.theme-base {
-			background-color: @theme-base;
 		}
 		&.theme-base {
 			background-color: @theme-base;
 		}
 
-		// Define two variables as the loop limits
-		@from: 0;
-		@to: 100;
+		&-wrap {
+			@mainWrap: @main-max-width - 0;
+			//change the width percentage on table
+			// unit((540 * 100) / 600)+0% = 90%
+			width: unit((@mainWrap * 100) / @main-width)+0%;
+			max-width: @mainWrap;
+			background-color: @secondary-base;
 
-		// Create a Parametric mixin and add a guard operation
-		.loop(@index) when (@index =< @to) {
-
-			// As the mixin is called CSS is outputted
-			&.spacer-@{index} {
-
-				td {
-					width: 100%;
-					max-width: @main-width;
-					height: unit(@index * 1, px);
-					max-height: unit(@index * 1, px);
-					min-height: unit(@index * 1, px);
-					line-height: unit(@index * 1, px);
-					font-size: unit(@index * 1, px);
-				}
+			td {
+				width: 100%;
+				max-width: @main-width;
+				height: 20px;
+				max-height: 20px;
+				min-height: 20px;
+				line-height: 20px;
+				font-size: 20px;
 			}
 
-			// Interation call and operation
-			.loop(@index + 1);
-		}
+		 	//use this class to make first and last spacer 
+			&.bs-color {
+				background-color: @primary-base;
+			}
+			
+			&.theme-base {
+				background-color: @theme-base;
+			}
 
-		// the mixin is called, css outputted and iterations called
-		.loop(@from);
+			// Define two variables as the loop limits
+			@from: 0;
+			@to: 100;
+
+			// Create a Parametric mixin and add a guard operation
+			.loop(@index) when (@index =< @to) {
+
+				// As the mixin is called CSS is outputted
+				&.spacer-@{index} {
+
+					td {
+						width: 100%;
+						max-width: @main-width;
+						height: unit(@index * 1, px);
+						max-height: unit(@index * 1, px);
+						min-height: unit(@index * 1, px);
+						line-height: unit(@index * 1, px);
+						font-size: unit(@index * 1, px);
+					}
+				}
+
+				// Interation call and operation
+				.loop(@index + 1);
+			}
+
+			// the mixin is called, css outputted and iterations called
+			.loop(@from);
+		}
 	}
 }
