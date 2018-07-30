@@ -1,4 +1,4 @@
-# BY Mailer 
+# BY Mailer
 Designing and testing emails is a pain. HTML tables, inline CSS, various devices and clients to test, and varying support for the latest web standards.
 
 This grunt task helps simplify things at the design stage:
@@ -19,7 +19,19 @@ This grunt task helps simplify things at the design stage:
   `gem install premailer nokogumbo or nokogiri`
 * [Mailgun](http://www.mailgun.com) - Sends the email (optional)
 * [Litmus](https://litmus.com) - Tests the email across all clients/browsers/devices (optional)
-* [Litmus email Clients] (https://bycom.litmus.com/emails/clients.xml)
+* [Litmus email Clients] (https://bycom.litmus.com/emails/clients.xml)  
+ 
+## Ruby  
+Open your terminal and run  
+```
+\curl -sSL https://get.rvm.io | bash -s stable
+When this is complete, you need to restart your terminal for the rvm to work.
+Run rvm list
+This shows the list of versions of the ruby.
+Run rvm install ruby-2.5.1
+If you type ruby -v in the terminal, you should see ruby 2.5.1.
+If it still shows you ruby 2.0., run rvm use ruby-2.5.1 --default.
+```
 
 ## Getting started
 If you haven't used [Grunt](http://gruntjs.com/) before check out Chris Coyier's post on [getting started with Grunt](http://24ways.org/2013/grunt-is-not-weird-and-hard/).
@@ -42,7 +54,7 @@ Clone repo for the new project/branch
 How to do a Git clone without the .git directory
 ```
 // Clone the repo
-git clone --depth=1 http://gitlab.bycom.pt/gitlab/bymailer.git <Project-branch>
+git clone --depth=1 https://github.com/marocas/bymailer <Project-branch>
 // CD to cloned folder
 cd ~/Project-branch
 // Remove the .git directory
@@ -50,7 +62,7 @@ rm -rf .git
 ```
 
 ## How it works
-![How it works](http://gitlab.bycom.pt/gitlab/bymailer/raw/05fc276f509272da83f55cad3d6acd264b1366d2/how-it-works.jpg)
+![How it works](https://raw.githubusercontent.com/marocas/bymailer/master/how-it-works.jpg)
 
 ### CSS
 This project uses [LESS](http://lesscss.org/). You don't need to touch the .css files, these are compiled automatically.

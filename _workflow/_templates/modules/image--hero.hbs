@@ -15,16 +15,19 @@
 							<tr>
 								<td>
 									{{!-- this table will align left/center/right --}}
-									<table class="img-wrap" width="{{img-wrap}}" border="0" cellspacing="0" cellpadding="0"
-												 align="{{direction}}">
+									<table class="img-wrap" width="{{img-wrap}}" border="0" cellspacing="0" cellpadding="0" align="{{#if align}}{{align}}{{else}}center{{/if}}">
 										<tr>
 											<td>
-												{{#if href}}
-													<a href="{{href}}" target="_blank">
-														<img src="{{src}}" alt="{{alt}}">
-													</a>
+												{{#if src}}
+													{{#if href}}
+														<a href="{{href}}" target="_blank">
+															<img src="/images/{{src}}" alt="{{alt}}">
+														</a>
+													{{else}}
+														<img src="/images/{{src}}" alt="{{alt}}">
+													{{/if}}
 												{{else}}
-													<img src="{{src}}" alt="{{alt}}">
+													<img src="http://placehold.it/600x300" alt="{{alt}}">
 												{{/if}}
 											</td>
 										</tr>

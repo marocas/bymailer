@@ -1,0 +1,32 @@
+{{> partials / ih
+	class="header"
+	direction="center"
+	src="header.gif"
+	alt="Kinsu"
+}}
+{{> partials / spacer class="spacer-30" }}
+
+{{> partials / art
+	text='
+		<p>Hello #{user.firstName} #{user.lastName},</p><br>
+		<p>The following link is to set your password in your first login</p>
+		<p>This link is valid until #{new Date(user.tokenExpirationDate).toUTCString()}</p>
+		<table class="main-wrap" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+			<tr>
+				<td>
+					<table class="btn-wrap" width="{{btn-wrap}}" border="0" cellspacing="0" cellpadding="0" align="center">
+						<tr>
+							<td class="btn btn-primary">
+								<a href="appUrl + "/bo/resetpass/"+ user.authToken" title="click here" target="_blank">click here</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<p>With kindness,<br> Kinsu Support</p>
+	'
+}}
+{{> partials / spacer class="spacer-30" }}
+
+

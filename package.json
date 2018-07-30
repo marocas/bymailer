@@ -1,13 +1,13 @@
 {
-  "name": "BY_Mailer",
+  "name": "by_mailer",
   "version": "4.1.0",
   "description": "BY Mailer",
-  "homepage": "http://bycom.pt/",
-  "author": "BY",
-  "email": "byinfo@bycom.com.pt",
+  "homepage": "https://github.com/marocas/bymailer",
+  "author": "Mário Silva",
+  "email": "marioposilva@gmail.com",
   "repository": {
     "type": "git",
-    "url": "http://gitlab.bycom.pt/bylabs/bymailer.git"
+    "url": "https://github.com/marocas/bymailer.git"
   },
   "devDependencies": {
     "grunt": "~1.0.1",

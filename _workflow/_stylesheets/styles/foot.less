@@ -1,0 +1,24 @@
+.foot {
+	background-color: @primary-base;
+
+	.main {
+		background-color: @primary-base;
+
+		&-wrap {
+			@mainWrap: @main-max-width - 40;
+			//change the width percentage on table
+			// unit((540 * 100) / 600)+0% = 90%
+			width: unit((@mainWrap * 100) / @main-width)+0%;
+			max-width: @mainWrap;
+			background-color: @primary-base;
+		}
+	}
+
+	p,
+	a {
+		font-family: @font;
+		font-size: 12px;
+		line-height: (14/12);
+		letter-spacing: 0;
+	}
+}

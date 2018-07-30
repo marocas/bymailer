@@ -2,10 +2,11 @@
 	background-color: @primary-base;
 
 	.main-wrap {
-
-		/* change the width percentage on table */
-		/* 90% = 540px  --  95% = 570px + 30px */
-		max-width: @main-max-width;
+		@mainWrap: @main-max-width - 40;
+		//change the width percentage on table
+		// unit((540 * 100) / 600)+0% = 90%
+		width: unit((@mainWrap * 100) / @main-width)+0%;
+		max-width: @mainWrap;
 		background-color: @secondary-base;
 
 		p {

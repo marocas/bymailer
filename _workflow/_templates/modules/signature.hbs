@@ -3,13 +3,13 @@
 		<td>
 			<!--[if (gte mso 9)|(IE)]>
 				<table width="{{#if tableWidth}}{{tableWidth}}{{else}}600{{/if}}" align="center" cellpadding="0" cellspacing="0" border="0">
-				<tr>
+			    <tr>
 				<td>
 			<![endif]-->
 			<table class="main {{classW}}" cellpadding="0" cellspacing="0" border="0" align="center">
 				<tr>
 					<td>
-						<table class="main-wrap" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+						<table class="main-wrap" cellspacing="0" cellpadding="0" border="0" align="center">
 							<tr>
 								<td height="30">
 									<span>
@@ -19,7 +19,7 @@
 							</tr>
 							<tr>
 								<td>
-									<img src="{{src}}" alt="{{alt}}">
+									<img {{#if nbSig}}class="nbSig"{{/if}} src="/images/{{src}}" alt="{{alt}}">
 								</td>
 							</tr>
 						</table>

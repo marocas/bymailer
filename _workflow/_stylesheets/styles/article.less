@@ -11,13 +11,14 @@
 	}
 
 	.main-wrap {
-
-		/* change the width percentage on table */
-		/* 90% = 540px  --  95% = 570px + 30px */
-		max-width: @main-max-width - 0;
+		@mainWrap: @main-max-width - 40;
+		//change the width percentage on table
+		// unit((540 * 100) / 600)+0% = 90%
+		width: unit((@mainWrap * 100) / @main-width)+0%;
+		max-width: @mainWrap;
 		background-color: @secondary-base;
 
-		/* Add class to article, so you get full gray background */
+		//Add class to article, so you get full gray background
 		&.gray {
 			background-color: @theme-base;
 
@@ -49,7 +50,7 @@
 			}
 		}
 
-		/* Add class to article, so you get a centered button */
+		//Add class to article, so you get a centered button
 		&.description {
 			a, p {
 				font-size: 14px;
@@ -58,7 +59,7 @@
 					color: @theme-color-text;
 				}
 
-				/* U tag, is for mark to be recognize by Gmail */
+				//U tag, is for mark to be recognize by Gmail
 				mark, u {
 					font: inherit;
 					color: inherit;
@@ -106,7 +107,7 @@
 			}
 		}
 
-		/* Normal text costomization */
+		//Normal text costomization
 		a, p {
 
 			span {
@@ -114,14 +115,14 @@
 			}
 		}
 
-		/* WyTalks */
+		//WyTalks
 		.heading {
 			font-size: 110px;
 			font-family: @georgia;
 			font-style: italic;
 			font-weight: normal;
 			line-height: 1em;
-			word-break: break-word; // mails without media queries.
+			word-break: break-all; // mails without media queries.
 		}
 		.data {
 			color: #000;

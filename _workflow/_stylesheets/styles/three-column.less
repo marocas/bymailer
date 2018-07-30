@@ -6,10 +6,11 @@
 	}
 
 	.main-wrap {
-
-		/* change the width percentage on table */
-		/* 90% = 540px  --  95% = 570px + 30px */
-		max-width: @main-max-width - 168;
+		@mainWrap: @main-max-width - 0;
+		//change the width percentage on table
+		// unit((540 * 100) / 600)+0% = 90%
+		width: unit((@mainWrap * 100) / @main-width)+0%;
+		max-width: @mainWrap;
 		background-color: @primary-base;
 		text-align: center;
 
@@ -22,16 +23,10 @@
 			}
 		}
 
-		p {
-			&:first-of-type {
-				font-size: 12px;
-				color: @primary-color-text;
-			}
-			&:last-of-type {
-				font-size: 10px;
-			}
-			font-size: 9px;
-			color: @primary-color-text;
+		a, p {
+			font-size: 10px;
+			color: #5F6466;
+			letter-spacing: 0.2px;
 		}
 
 		img {
@@ -63,6 +58,8 @@
 
 		a, p {
 			font-size: 10px;
+			color: #5F6466;
+			letter-spacing: 0.2px;
 		}
 
 		a {
@@ -88,40 +85,27 @@
 			display: inline-block;
 			vertical-align: middle;
 			border: 0;
-		}
 
-		div:first-child {
+			&:first-child,
+			&:last-child {
+				table {
+					max-width: (600-288px)/2;
+					display: inline-block;
 
-			table {
-				max-width: 180px;
-				display: inline-block;
-
-				td:nth-child(2) {
-					width: 160px;
+					td:nth-child(2) {
+						width: (600-288px)/2;
+					}
 				}
 			}
-		}
 
-		div:nth-child(2) {
+			&:nth-child(2) {
+				table {
+					max-width: 288px;
+					display: inline-block;
 
-			table {
-				max-width: 288px;
-				display: inline-block;
-
-				td:nth-child(2) {
-					width: 268px;
-				}
-			}
-		}
-
-		div:last-child {
-
-			table {
-				max-width: 132px;
-				display: inline-block;
-
-				td:nth-child(2) {
-					width: 112px;
+					td:nth-child(2) {
+						width: 268px;
+					}
 				}
 			}
 		}
