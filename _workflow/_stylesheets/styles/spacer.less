@@ -20,12 +20,18 @@
 		}
 
 		/* use this class to make first and last spacer */
+		.bs-color {
+			background-color: @primary-base;
+		}
 		&.bs-color {
 			background-color: @primary-base;
 		}
 
-		.bs-color {
-			background-color: @primary-base;
+		.theme-base {
+			background-color: @theme-base;
+		}
+		&.theme-base {
+			background-color: @theme-base;
 		}
 
 		// Define two variables as the loop limits
@@ -50,7 +56,7 @@
 			}
 
 			// Interation call and operation
-			.loop(@index + 5);
+			.loop(@index + 1);
 		}
 
 		// the mixin is called, css outputted and iterations called
