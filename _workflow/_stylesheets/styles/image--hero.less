@@ -2,6 +2,11 @@
 	background-color: @primary-base;
 
 	.main-wrap {
+		@mainWrap: @main-max-width + 60;
+		//change the width percentage on table
+		// unit((540 * 100) / 600)+0% = 90%
+		width: unit((@mainWrap * 100) / @main-width)+0%;
+		max-width: @mainWrap;
 
 		.img-wrap {
 			margin: 0 auto; // IOS fix align center.
@@ -12,9 +17,15 @@
 		}
 
 		&.header {
+			@mainWrap: @main-max-width - 0;
+			//change the width percentage on table
+			// unit((540 * 100) / 600)+0% = 90%
+			width: unit((@mainWrap * 100) / @main-width)+0%;
+			max-width: @mainWrap;
+
 			img {
 				width: 100%;
-				max-width: @main-width;
+				max-width: @main-width - 60px;
 				max-height: 420px;
 			}
 		}
